@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/acme-color-app/static/css/main.14424266.chunk.css",
+    "main.js": "/acme-color-app/static/js/main.da8a7ce2.chunk.js",
+    "main.js.map": "/acme-color-app/static/js/main.da8a7ce2.chunk.js.map",
+    "runtime-main.js": "/acme-color-app/static/js/runtime-main.d3b0ac55.js",
+    "runtime-main.js.map": "/acme-color-app/static/js/runtime-main.d3b0ac55.js.map",
+    "static/js/2.0ed7b24a.chunk.js": "/acme-color-app/static/js/2.0ed7b24a.chunk.js",
+    "static/js/2.0ed7b24a.chunk.js.map": "/acme-color-app/static/js/2.0ed7b24a.chunk.js.map",
+    "index.html": "/acme-color-app/index.html",
+    "precache-manifest.344e798cda8d01628ab367a99d1ff680.js": "/acme-color-app/precache-manifest.344e798cda8d01628ab367a99d1ff680.js",
+    "service-worker.js": "/acme-color-app/service-worker.js",
+    "static/css/main.14424266.chunk.css.map": "/acme-color-app/static/css/main.14424266.chunk.css.map",
+    "static/js/2.0ed7b24a.chunk.js.LICENSE.txt": "/acme-color-app/static/js/2.0ed7b24a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3b0ac55.js",
+    "static/js/2.0ed7b24a.chunk.js",
+    "static/css/main.14424266.chunk.css",
+    "static/js/main.da8a7ce2.chunk.js"
+  ]
+}
