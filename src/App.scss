@@ -1,0 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323');
+
+$big-bg-color: rgb(0, 0, 255);
+$big-fg-color: rgb(255, 255, 255);
+
+$fire-truck-red: rgb(255, 0, 0);
+$industrial-green: rgb(0, 153, 0);
+
+
+.mainTheme  {
+  font-family: 'VT323', monospace;
+  background-color: $fire-truck-red;
+  color: $big-fg-color;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  @media only screen and (min-width: 600px) {
+    background-color: $industrial-green;
+  }
+}
+.startTheme {
+  font-family: 'VT323', monospace;
+  background-color: $big-bg-color;
+  color: $big-fg-color;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.innerBox {
+  align-self: center;
+  flex-wrap: nowrap;
+  border: 1px solid $big-fg-color;
+  padding: 10px;
+}
+
+

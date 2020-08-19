@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import appClasses from './classes.js';
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      width: 0, 
+      height: 0, 
+      alertMsg: null,
+      startApp: true,
+    };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+  
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    this.setState({
+      startApp: false,
+    })
+    console.log('',this.state.startApp)
+    if(window.innerHeight < 400){
+      this.state.alertMsg = "Stop It!";
+    }else{
+      this.state.alertMsg = null;
+    }
+  }
+
+
+  render() {
+    return (
+      <div className={this.state.startApp? appClasses.appStart : appClasses.appBg}>
+          <div className={appClasses.appInn}>
+            ACME<br/>
+            Advanced Compoter Intelligenced Colors<br/>
+            v.1.0<br/>
+            {this.state.alertMsg}
+        </div>
+      </div>
+    );
+    }
 }
 
-export default App;
