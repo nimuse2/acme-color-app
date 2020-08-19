@@ -7,6 +7,9 @@ $big-fg-color: rgb(255, 255, 255);
 $fire-truck-red: rgb(255, 0, 0);
 $industrial-green: rgb(0, 153, 0);
 
+$alert-fg: rgb(0,0,0);
+$alert-bg: rgb(255, 255, 0);
+
 
 .mainTheme  {
   font-family: 'VT323', monospace;
@@ -34,6 +37,10 @@ $industrial-green: rgb(0, 153, 0);
   flex-wrap: nowrap;
   border: 1px solid $big-fg-color;
   padding: 10px;
+}
+.alertMsg {
+  background-color: $alert-bg;
+  color: $alert-fg;
 }
 
 

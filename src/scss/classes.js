@@ -10,7 +10,10 @@ const appClasses = {
     ),
     appInn: classNames(
         'innerBox',
-    )
+    ),
+    alertMsg: classNames(
+        'alertMsg',
+    ),
 }
 
 export default appClasses;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import appClasses from './classes.js';
+import appClasses from './scss/classes.js';
 
 export default class App extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ export default class App extends Component {
     })
     console.log('',this.state.startApp)
     if(window.innerHeight < 400){
-      this.state.alertMsg = "Stop It!";
+      this.state.alertMsg = "Window is too small. Aborting program...";
     }else{
       this.state.alertMsg = null;
     }
@@ -43,7 +43,11 @@ export default class App extends Component {
             ACME<br/>
             Advanced Compoter Intelligenced Colors<br/>
             v.1.0<br/>
-            {this.state.alertMsg}
+            {this.state.alertMsg && (
+              <div className={appClasses.alertMsg}>
+                {this.state.alertMsg}
+              </div>
+            )}
         </div>
       </div>
     );
